@@ -1,0 +1,39 @@
+<idea-plugin>
+  <id>cn.zengliming.plugin</id>
+  <name>Tools</name>
+  <version>1.0</version>
+  <vendor email="2604609656@qq.com" url="http://www.zlmthy.cn">zengliming</vendor>
+
+  <description><![CDATA[
+      常用的工具集合
+    ]]></description>
+
+  <change-notes><![CDATA[
+      Add change notes here.<br>
+      <em>most HTML tags may be used</em>
+    ]]>
+  </change-notes>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/build_number_ranges.html for description -->
+  <idea-version since-build="173.0"/>
+
+  <!-- please see https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html
+       on how to target different products -->
+  <depends>com.intellij.modules.platform</depends>
+
+  <extensions defaultExtensionNs="com.intellij">
+    <!-- Add your extensions here -->
+  </extensions>
+
+  <actions>
+    <!-- Add your actions here -->
+    <group text="Sample Menu" description="Sample menu">
+      <add-to-group group-id="MainMenu" anchor="last" />
+      <action id="tools.TextBoxes" class="cn.zengliming.plugin.tools.TextBoxes" text="Text Boxes" description="A test menu item" />
+    </group>
+    <action id="tools.item" class="cn.zengliming.plugin.tools.ToolsItem" text="Tools" description="工具">
+      <add-to-group group-id="ToolsMenu" anchor="first"/>
+    </action>
+  </actions>
+
+</idea-plugin>
