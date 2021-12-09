@@ -38,5 +38,5 @@ func TestProxy_Run(t *testing.T) {
 
 func TestManager_Add(t *testing.T) {
 	m := new(Manager)
-	m.Add("127.0.0.1:3306", "172.20.110.11:3306", 10)
+	m.Add("127.0.0.1:3306", "172.20.110.11:3306", 10, true)
 }
